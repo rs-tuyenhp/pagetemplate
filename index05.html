@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page Light Breakfast</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./fonts/Icon/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+  <!-- Optional - Adds useful class to manipulate icon font display -->
+  <link rel="stylesheet" href="./fonts/Icon/pe-icon-7-stroke/css/helper.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- <link rel="stylesheet" href="./css/responsive.css"> -->
+  <!-- <link rel="stylesheet" href="fonts/fontawesome/css/all.css"> -->
+  <link href="plugins/slick/slick.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header" class="header02">
+      <div class="header-sticky">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="block">
+                <div class="headerWrap">
+                  <div class="logo-header">
+                    <a href="./index.html">
+                      <img src="./assets/images/logo.png" alt="logo">
+                    </a>
+                  </div>
+                  <nav id="mainnav" class="nav-header">
+                    <p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+                    <div class="panel" id="i_panel">
+                      <ul>
+                        <li class="active"><a href="index02.html">HOME</a></li>
+                        <li class=""><a href="index03.html">ABOUT</a></li>
+                        <li class=""><a href="index05.html">CONTACT</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+      </header>
+    <!-- start content-page -->
+    <section class="ss-block ss-light-breakfast">
+      <div class="container">
+
+      </div>
+    </section>
+  </div>
+
+  <script type="text/javascript" src="./plugins/jquery-1.12.4/jquery-1.12.4.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#exportPDF").click(function(){
+        var w = document.getElementById("wrapper_pdf_attributes_analysis").offsetWidth / 2.4;
+        var h = document.getElementById("wrapper_pdf_attributes_analysis").offsetHeight / 2.4;
+        html2canvas(document.getElementById("wrapper_pdf_attributes_analysis")).then(canvas => {
+          var img = canvas.toDataURL("image/jpeg", 1);
+          var pdf = new jsPDF('P', 'px', 'a4');
+          for (let i = 0; i < pagePDF; i++) {
+            pdf.addImage(img, "JPEG", 0, -(625 * i), w, h, undefined, "FAST");
+            if (i < (pagePDF - 1)) { pdf.addPage(); }
+          }
+          $("#loader").removeClass('loader-circle');
+          pdf.save(nameFilePdf);
+        });
+      });
+      /* ! Event exportPDF */
+    });
+  </script>
+</body>
+</html>

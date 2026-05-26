@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" width="48" height="24">
+	<defs>
+		<image width="16" height="8" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAAXklEQVQoU2NkoBAwEtL//z8DIyMjw39c6vAa8P8sQx/Df4YcBkaGKYzGDEXYDMFpAFRzIVwTI0M/NkOwGgByNsNZhp8MDAysSLb+ZjRhYEN3BW1cALOFojAgFDsweQAxsRwJc3osFAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="table">
+		<use id="Ellipse 2 copy 5" href="#img1" transform="matrix(3,0,0,3,0,0)"/>
+	</g>
+</svg>
