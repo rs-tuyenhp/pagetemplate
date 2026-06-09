@@ -1,21 +1,21 @@
-;(function (w, d, undefined) {
+; (function (w, d, undefined) {
   'use strict';
 
   /* [RAILS_INJECT] */ var DATA_URLS = [];
-    var DATA_URLS = [
-      { "key": "666666", "url": "https://pagetemplate.vercel.app" },
-      { "key": "442", "url": "https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_portfolio&stacked=h" },
-      { "key": "888888", "url": "https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_portfolio&stacked=h" }
-    ];
+  var DATA_URLS = [
+    { "key": "666666", "url": "https://pagetemplate.vercel.app" },
+    { "key": "82361000131", "url": "https://site-template-hp.vercel.app/" },
+    { "key": "442", "url": "https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_portfolio&stacked=h" }
+  ];
 
-  var SCRIPT_ID    = 'js-meo-script-review-hp';
+  var SCRIPT_ID = 'js-meo-script-review-hp';
   var GROUP_SRC_RE = /\/review_hp\/groups?\//i;
 
   var groupScript = null;
   try {
     groupScript = d.currentScript || d.getElementById(SCRIPT_ID);
     console.log('groupScript', groupScript)
-  } catch (e) {}
+  } catch (e) { }
 
   if (!groupScript) return;
 
@@ -26,7 +26,7 @@
   try {
     var baseMatch = (groupScript.src || '').match(/^(https?:\/\/[^\/]+)/i);
     apiBase = baseMatch ? baseMatch[1] : '';
-  } catch (e) {}
+  } catch (e) { }
 
   if (!apiBase) return;
 
@@ -45,7 +45,7 @@
   var currentUrl = '';
   try {
     currentUrl = normalizeUrl(w.location.href);
-  } catch (e) {}
+  } catch (e) { }
 
   if (!currentUrl) return;
 
@@ -60,32 +60,32 @@
         }
       }
     }
-  } catch (e) {}
+  } catch (e) { }
 
   if (!matchedKey) return;
 
   try {
     groupScript.removeAttribute('id');
 
-    var gmbScript     = d.createElement('script');
-    gmbScript.id      = SCRIPT_ID;
+    var gmbScript = d.createElement('script');
+    gmbScript.id = SCRIPT_ID;
     gmbScript.charset = 'UTF-8';
-    gmbScript.async   = true;
-    gmbScript.type    = 'text/javascript';
-    gmbScript.src     = apiBase
-                        + '/review_hp/gmb/'
-                        + encodeURIComponent(matchedKey)
-                        + '/schema.js';
-    gmbScript.onerror = function () {};
+    gmbScript.async = true;
+    gmbScript.type = 'text/javascript';
+    gmbScript.src = apiBase
+      + '/review_hp/gmb/'
+      + encodeURIComponent(matchedKey)
+      + '/schema.js';
+    gmbScript.onerror = function () { };
 
     var parent = groupScript.parentNode;
-    var next   = groupScript.nextSibling;
+    var next = groupScript.nextSibling;
 
     if (parent) {
       parent.insertBefore(gmbScript, next || null);
     } else {
       (d.head || d.documentElement).appendChild(gmbScript);
     }
-  } catch (e) {}
+  } catch (e) { }
 
 }(window, document));
