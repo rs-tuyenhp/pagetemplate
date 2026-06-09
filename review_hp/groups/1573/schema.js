@@ -4,7 +4,7 @@
   /* [RAILS_INJECT] */ var DATA_URLS = [];
   var DATA_URLS = [
     { "key": "666666", "url": "https://pagetemplate.vercel.app" },
-    { "key": "82361000131", "url": "https://site-template-hp.vercel.app/" },
+    { "key": "82361000131", "url": "https://site-template-hp.vercel.app" },
     { "key": "442", "url": "https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_portfolio&stacked=h" }
   ];
 
