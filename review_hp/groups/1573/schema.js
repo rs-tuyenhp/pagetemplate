@@ -3,7 +3,7 @@
 
   /* [RAILS_INJECT] */ var DATA_URLS = [];
   var DATA_URLS = [
-    { "key": "666666", "url": "https://pagetemplate.vercel.app" },
+    { "key": "666666", "url": "https://pagetemplate.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=general&keyword=%E3%83%9E%E3%82%A4%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9&_matchtype=b&gad_source=1&gad_campaignid=17397601097&gbraid=0AAAAACPKK676rzUrlHjUpD6y2_SIR0wPp&gclid=CjwKCAjwuanRBhBSEiwAY5y6VzP4BvCubkzQcdKQtRtXxtR-6TUJVgKZKvTocWhE0o_zPzGQSCIdTxoCi7cQAvD_BwE" },
     { "key": "82361000131", "url": "https://site-template-hp.vercel.app" },
     { "key": "442", "url": "https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_portfolio&stacked=h" }
   ];
